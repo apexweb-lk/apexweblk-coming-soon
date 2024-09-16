@@ -1,8 +1,34 @@
-# React + Vite
+# "Coming Soon" Landing Page 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Apex Web's "Coming Soon" landing page. This page serves as a placeholder while we prepare to launch our official website, giving visitors a sneak peek and allowing them to stay updated.
 
-Currently, two official plugins are available:
+## Commands
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Development Server: Start the development server with live reloading.
+
+```
+npm run dev
+```
+
+- Production Build: Create an optimized production build.
+
+```
+npm run build
+```
+
+- Preview Build: Preview the production build locally.
+
+```
+npm run preview
+```
+
+- Linting: Run ESLint to check for code quality issues.
+
+```
+npm run lint
+```
+
+
+
+
+
