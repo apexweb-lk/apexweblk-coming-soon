@@ -2,7 +2,6 @@ import './App.css'
 import Typewriter from 'typewriter-effect';
 
 function App() {
-
   return (
     <>
       <p className="small-text">
