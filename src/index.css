@@ -33,6 +33,12 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 768px) {
+  body {
+    min-height: 60vh; /* For mobile devices */
+  }
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
