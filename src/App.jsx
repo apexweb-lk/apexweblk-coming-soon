@@ -1,5 +1,6 @@
 import './App.css';
 import { lazy, Suspense } from 'react';
+import BgParticles from './BgParticles.jsx';
 
 // lazy load the type writer effect!
 const Typewriter = lazy(() => import('typewriter-effect'));
@@ -14,6 +15,7 @@ document.addEventListener('mousemove', e => {
 function App() {
   return (
     <>
+      <BgParticles />
       <p className="small-text">
         For an Exceptional Web Experience!
       </p>
