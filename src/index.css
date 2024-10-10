@@ -13,8 +13,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;  /* caused by customer cursor */
 }
 
+
+/* Default Elements */
 a {
   font-weight: 500;
   color: #73ffad;
@@ -25,6 +28,13 @@ a:hover {
   color: #00f178;
 }
 
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+/* Layout */
 body {
   margin: 0;
   display: flex;
@@ -40,12 +50,8 @@ body {
   }
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
-
+/* Custom Cursor */
 .cursor {
 	position: absolute;
 	width: 20px;
