@@ -30,6 +30,3 @@ npm run lint
 
 
 
-
-
-tmp
