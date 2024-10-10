@@ -1,5 +1,15 @@
-import './App.css'
-import Typewriter from 'typewriter-effect';
+import './App.css';
+import { lazy, Suspense } from 'react';
+
+// lazy load the type writer effect!
+const Typewriter = lazy(() => import('typewriter-effect'));
+
+// glowing cursor
+document.addEventListener('mousemove', e => {
+  const cursor = document.querySelector('.cursor');
+  cursor.style.left = e.pageX + 'px';
+  cursor.style.top = e.pageY + 'px';
+});
 
 function App() {
   return (
@@ -8,13 +18,16 @@ function App() {
         For an Exceptional Web Experience!
       </p>
       <h1>
-        <Typewriter
-          options={{
-            strings: ['Apex Web', 'Coming Soon!'],
-            autoStart: true,
-            loop: true,
-          }}
-        />
+        <Suspense fallback={<div>Apex Web</div>}>
+          <Typewriter
+            options={{
+              strings: ['Apex Web', 'Coming Soon!'],
+              autoStart: true,
+              loop: true,
+              deleteSpeed: 'natural'
+            }}
+          />
+        </Suspense>
       </h1>
       <p className="small-text">
         Contact us at <br></br>
@@ -26,8 +39,9 @@ function App() {
           <code>+94777662700</code>
         </a>
       </p>
+      <div className="cursor"></div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
