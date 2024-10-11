@@ -1,7 +1,7 @@
 import './App.css';
 import { lazy, Suspense } from 'react';
+import BgParticles from './BgParticles.jsx';
 
-const BgParticles = lazy(() => import('./BgParticles.jsx'));
 const Typewriter = lazy(() => import('typewriter-effect'));
 
 // glowing cursor
