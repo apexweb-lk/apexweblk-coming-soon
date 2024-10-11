@@ -52,18 +52,9 @@ body {
 
 
 /* Custom Cursor */
-.cursor {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background-color: rgb(48, 214, 68);
-	mix-blend-mode: difference;
-	pointer-events: none;
-	transform: translate(-50%, -50%);
-	transition: width 0.3s, height 0.3s, background-color 0.3s;
-	animation: glow 1s infinite alternate;
-}
+/* ------------- */
+
+/* cursor glow */
 @keyframes glow {
 	0% {
 		box-shadow: 0 0 10px 5px rgba(0, 255, 4, 0.5);
@@ -72,3 +63,21 @@ body {
 		box-shadow: 0 0 20px 10px rgba(30, 255, 0, 0.9);
 	}
 }
+
+/* show cursor only on desktop  */
+@media (min-width: 768px) {
+  .cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(48, 214, 68);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+    animation: glow 1s infinite alternate;
+  }
+}
+
+
