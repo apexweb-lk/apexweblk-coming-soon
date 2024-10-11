@@ -1,8 +1,7 @@
 import './App.css';
 import { lazy, Suspense } from 'react';
-import BgParticles from './BgParticles.jsx';
 
-// lazy load the type writer effect!
+const BgParticles = lazy(() => import('./BgParticles.jsx'));
 const Typewriter = lazy(() => import('typewriter-effect'));
 
 // glowing cursor
@@ -15,7 +14,10 @@ document.addEventListener('mousemove', e => {
 function App() {
   return (
     <>
+      {/* background */}
       <BgParticles />
+
+      {/* my contact info */}
       <p className="small-text">
         For an Exceptional Web Experience!
       </p>
